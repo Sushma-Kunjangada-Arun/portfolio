@@ -1,0 +1,15 @@
+@media screen and (max-width: 1000px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+}

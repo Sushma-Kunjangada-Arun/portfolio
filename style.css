@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a, .btn {
+  transition: all 300ms ease;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: grey !important;
+}
+
+/* ---------- DESKTOP NAV ---------- */
+
+nav, .nav-links-1, .nav-links-2 {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 12vh;
+}
+
+.logo img {
+  height: 90px;
+}
+
+.nav-links-1, .nav-links-2 {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1rem;
+}
+
+/* ---------- TOGGLE BUTTON ---------- */
+
+#theme-toggle, #theme-toggle-mobile {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+#theme-toggle:hover, #theme-toggle-mobile:hover {
+  background: lightgrey;
+}
+
+#theme-icon, #theme-icon-mobile {
+  width: 22px;
+  height: 22px;
+  color: #000;
+}
+
+/* ---------- RESUME BUTTON ---------- */
+
+.resume-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+
+body.dark-mode .resume-button:hover, body.light-mode .resume-button:hover {
+  color: white;
+}
+
+/* ---------- LIGHT/DARK MODES ---------- */
+
+body.light-mode a {
+  color: black;
+}
+
+body.light-mode .resume-button {
+  background-color: black;
+  color: white;
+}
+
+body.light-mode #theme-icon, body.light-mode #theme-icon-mobile {
+  color: black;
+}
+
+body.dark-mode {
+  background-color: #0d1117;
+  color: white;
+}
+
+body.dark-mode a {
+  color: white;
+}
+
+body.dark-mode .resume-button {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode #theme-icon, body.dark-mode #theme-icon-mobile {
+  color: white;
+}
+
+/* Default - only show desktop nav */
+#hamburger-nav {
+  display: none;
+}
+
+#desktop-nav {
+  display: flex;
+}
+
+
+/* ---------- MOBILE MENU ---------- */
+
+.hamburger-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#hamburger-nav .logo img {
+  height: 60px;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+body.light-mode .hamburger-icon span {
+  background-color: black;
+}
+
+body.dark-mode .hamburger-icon span {
+  background-color: white;
+}
+
+
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu-links {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 280px;
+  background-color: white;
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.1);
+  padding: 24px 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.menu-links.open {
+  transform: translateX(0);
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-header img {
+  height: 60px;
+}
+
+.close-icon {
+  background: #f2f2f2;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ---------- MENU LIST ---------- */
+
+.menu-list {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.menu-list li {
+  margin: 1.2rem 0;
+}
+
+.menu-list a {
+  font-size: 1.1rem;
+  color: #3b3b3b;
+  text-decoration: none;
+}
+
+.menu-list a:hover {
+  color: grey;
+}
+
+.menu-list .resume-button {
+  background-color: #0d1117;
+  color: white;
+  padding: 12px;
+  border-radius: 16px;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+
+.theme-toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.theme-toggle-row label {
+  font-size: 0.9rem;
+}
+
+/* ---------- DARK MODE MENU ---------- */
+
+body.dark-mode .menu-links {
+  background-color: #0d1117;
+}
+
+body.dark-mode .menu-list a,
+body.dark-mode .theme-toggle-row label {
+  color: white;
+}
+
+body.dark-mode .menu-list .resume-button {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode .menu-list .resume-button:hover {
+  color: grey;
+}
+

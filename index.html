@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sushma Kunjangada Arun | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="mediaqueries.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Desktop Nav -->
+  <nav id="desktop-nav">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" />
+    </div>
+    <ul class="nav-links-1">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certificate">Certificates</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <ul class="nav-links-2">
+      <li>
+        <button id="theme-toggle"><i id="theme-icon" data-lucide="moon"></i></button>
+      </li>
+      <li>
+        <a href="https://drive.google.com/file/d/1SZ_OGcyLmQctOshlWz89S0U1K0Go41-D/view?usp=sharing" class="resume-button" target="_blank">Download Resume</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Hamburger Nav (Mobile) -->
+<nav id="hamburger-nav">
+  <!-- Top: Logo and Hamburger Icon -->
+  <div class="hamburger-menu">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" />
+    </div>
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Overlay Background -->
+  <div class="menu-overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Sliding Side Menu -->
+  <div class="menu-links" id="mobileMenu">
+    <!-- Menu Header: Logo + Close Icon -->
+    <div class="menu-header">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo" />
+      </div>
+      <button class="close-icon" onclick="toggleMenu()">✕</button>
+    </div>
+
+    <!-- Unified Vertical List -->
+    <ul class="menu-list">
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+      <li><a href="#certificate" onclick="toggleMenu()">Certificates</a></li>
+      <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      <li class="theme-toggle-row">
+        <label>Switch Theme</label>
+        <button id="theme-toggle-mobile">
+          <i id="theme-icon-mobile" data-lucide="moon"></i>
+        </button>
+      </li>
+      <li>
+        <a href="https://drive.google.com/file/d/1SZ_OGcyLmQctOshlWz89S0U1K0Go41-D/view?usp=sharing"
+           class="resume-button"
+           target="_blank"
+           onclick="toggleMenu()">
+           Download Resume
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
