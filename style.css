@@ -30,14 +30,38 @@ a:hover {
 
 /* ---------- DESKTOP NAV ---------- */
 
-nav, .nav-links-1, .nav-links-2 {
+.nav-links-1, .nav-links-2 {
   display: flex;
 }
 
 nav {
-  justify-content: space-around;
-  align-items: center;
+  margin-top: 2vh;
   height: 12vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+body.dark-mode nav {
+  background-color: rgba(13, 17, 23, 0.8);
+}
+
+
+.layout-container,
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
 }
 
 .logo img {
@@ -45,9 +69,11 @@ nav {
 }
 
 .nav-links-1, .nav-links-2 {
+  display: flex;
   gap: 2rem;
   list-style: none;
   font-size: 1rem;
+  align-items: center;
 }
 
 /* ---------- TOGGLE BUTTON ---------- */
@@ -130,11 +156,6 @@ body.dark-mode #theme-icon, body.dark-mode #theme-icon-mobile {
   display: none;
 }
 
-#desktop-nav {
-  display: flex;
-}
-
-
 /* ---------- MOBILE MENU ---------- */
 
 .hamburger-menu {
@@ -145,7 +166,8 @@ body.dark-mode #theme-icon, body.dark-mode #theme-icon-mobile {
 }
 
 #hamburger-nav .logo img {
-  height: 60px;
+  height: 80px;
+  margin-bottom: 0.5rem;
 }
 
 .hamburger-icon {
@@ -171,8 +193,6 @@ body.light-mode .hamburger-icon span {
 body.dark-mode .hamburger-icon span {
   background-color: white;
 }
-
-
 
 .menu-overlay {
   position: fixed;
@@ -202,7 +222,7 @@ body.dark-mode .hamburger-icon span {
   max-width: 280px;
   background-color: white;
   box-shadow: -2px 0 12px rgba(0, 0, 0, 0.1);
-  padding: 24px 20px;
+  padding: 0;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   display: flex;
@@ -218,7 +238,16 @@ body.dark-mode .hamburger-icon span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* full-width line */
+  width: 100%;
+  margin-bottom: 1rem;
 }
+
+body.dark-mode .menu-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 
 .menu-header img {
   height: 60px;
@@ -233,12 +262,10 @@ body.dark-mode .hamburger-icon span {
   cursor: pointer;
 }
 
-/* ---------- MENU LIST ---------- */
-
 .menu-list {
   list-style: none;
-  margin: 2rem 0;
-  padding: 0;
+  margin: 0.25rem 0 2rem 0; /* reduced top margin to 0.25rem */
+  padding: 0 1.25rem;       /* keeps horizontal alignment */
 }
 
 .menu-list li {
@@ -265,7 +292,6 @@ body.dark-mode .hamburger-icon span {
   font-size: 0.95rem;
 }
 
-
 .theme-toggle-row {
   display: flex;
   justify-content: space-between;
@@ -277,8 +303,6 @@ body.dark-mode .hamburger-icon span {
 .theme-toggle-row label {
   font-size: 0.9rem;
 }
-
-/* ---------- DARK MODE MENU ---------- */
 
 body.dark-mode .menu-links {
   background-color: #0d1117;
@@ -298,3 +322,96 @@ body.dark-mode .menu-list .resume-button:hover {
   color: grey;
 }
 
+/* === SECTION === */
+
+.section {
+  margin-top: 8vh; 
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.profile-image {
+  width: 30%;
+  position: relative;
+  margin-bottom: 2rem; /* Adds space below image */
+  padding: 0.5rem; /* Border spacing */
+  border: 2px solid gray; /* Blue border (light mode) */
+  border-radius: 12px;
+  background-color: white; /* fallback */
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* For dark mode */
+body.dark-mode .profile-image {
+  border-color: white;
+  background-color: #0d1117;
+}
+
+
+.profile-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.text-content {
+  width: 70%;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.location-availability {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #10B981;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}

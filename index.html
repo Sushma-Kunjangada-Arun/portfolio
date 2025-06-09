@@ -6,84 +6,128 @@
   <title>Sushma Kunjangada Arun | Full Stack Developer</title>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="mediaqueries.css">
+  <!-- Place this in your <head> section -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <!-- Desktop Nav -->
   <nav id="desktop-nav">
-    <div class="logo">
-      <img src="assets/logo.png" alt="Logo" />
-    </div>
-    <ul class="nav-links-1">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#certificate">Certificates</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <ul class="nav-links-2">
-      <li>
-        <button id="theme-toggle"><i id="theme-icon" data-lucide="moon"></i></button>
-      </li>
-      <li>
-        <a href="https://drive.google.com/file/d/1SZ_OGcyLmQctOshlWz89S0U1K0Go41-D/view?usp=sharing" class="resume-button" target="_blank">Download Resume</a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Hamburger Nav (Mobile) -->
-<nav id="hamburger-nav">
-  <!-- Top: Logo and Hamburger Icon -->
-  <div class="hamburger-menu">
-    <div class="logo">
-      <img src="assets/logo.png" alt="Logo" />
-    </div>
-    <div class="hamburger-icon" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <!-- Overlay Background -->
-  <div class="menu-overlay" id="overlay" onclick="toggleMenu()"></div>
-
-  <!-- Sliding Side Menu -->
-  <div class="menu-links" id="mobileMenu">
-    <!-- Menu Header: Logo + Close Icon -->
-    <div class="menu-header">
+    <div class="layout-container">
       <div class="logo">
         <img src="assets/logo.png" alt="Logo" />
       </div>
-      <button class="close-icon" onclick="toggleMenu()">✕</button>
+      <ul class="nav-links-1">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <!-- <li><a href="#certificate">Certificates</a></li> -->
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="nav-links-2">
+        <li>
+          <button id="theme-toggle"><i id="theme-icon" data-lucide="moon"></i></button>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1SZ_OGcyLmQctOshlWz89S0U1K0Go41-D/view?usp=sharing" class="resume-button" target="_blank">Download Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hamburger Nav (Mobile) -->
+  <nav id="hamburger-nav">
+    <!-- Top: Logo and Hamburger Icon -->
+    <div class="hamburger-menu layout-container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo" />
+      </div>
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
-    <!-- Unified Vertical List -->
-    <ul class="menu-list">
-      <li><a href="#about" onclick="toggleMenu()">About</a></li>
-      <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-      <li><a href="#certificate" onclick="toggleMenu()">Certificates</a></li>
-      <li><a href="#work" onclick="toggleMenu()">Work</a></li>
-      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      <li class="theme-toggle-row">
-        <label>Switch Theme</label>
-        <button id="theme-toggle-mobile">
-          <i id="theme-icon-mobile" data-lucide="moon"></i>
-        </button>
-      </li>
-      <li>
-        <a href="https://drive.google.com/file/d/1SZ_OGcyLmQctOshlWz89S0U1K0Go41-D/view?usp=sharing"
-           class="resume-button"
-           target="_blank"
-           onclick="toggleMenu()">
-           Download Resume
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <!-- Overlay Background -->
+    <div class="menu-overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Sliding Side Menu -->
+    <div class="menu-links" id="mobileMenu">
+      <!-- Menu Header: Logo + Close Icon -->
+      <div class="menu-header">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Logo" />
+        </div>
+        <button class="close-icon" onclick="toggleMenu()">✕</button>
+      </div>
+
+      <!-- Unified Vertical List -->
+      <ul class="menu-list">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <!-- <li><a href="#certificate" onclick="toggleMenu()">Certificates</a></li> -->
+        <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <li class="theme-toggle-row">
+          <label>Switch Theme</label>
+          <button id="theme-toggle-mobile">
+            <i id="theme-icon-mobile" data-lucide="moon"></i>
+          </button>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1SZ_OGcyLmQctOshlWz89S0U1K0Go41-D/view?usp=sharing"
+            class="resume-button"
+            target="_blank"
+            onclick="toggleMenu()">
+            Download Resume
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Section -->
+   <section id="home" class="section">
+    <div class="section-container">
+      <div class="text-content">
+        <h1>Hi, I'm Sushma</h1>
+        <p>
+          I’m a full stack developer who enjoys working across the stack and making things that actually work — and work well. 
+          I’ve got a solid background in building API-driven systems from my time as an Integration Developer, and now I’m diving deeper into frontend and backend technologies like React, Spring Boot, and more. 
+          I’m always curious, always building, and I genuinely enjoy learning new tools and figuring things out.
+          I believe good tech should be simple, reliable, and make life easier — and that’s what I try to build.
+        </p>
+
+        <div class="location-availability">
+          <p><i data-lucide="map-pin"></i> Boston, Massachusetts</p>
+          <p><span class="dot"></span> Available for Internship/Co-op</p>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/Sushma-Kunjangada-Arun" target="_blank" aria-label="GitHub">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://linkedin.com/in/sushmaka" target="_blank" aria-label="LinkedIn">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="mailto:kunjangadaarun.s@northeastern.edu" aria-label="Email">
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="profile-image">
+        <img src="./assets/profile.jpg" alt="Sushma Kunjangada Arun profile picture">
+      </div>
+    </div>
+  </section>
 
 
   <script src="script.js"></script>
+  <script>
+  lucide.createIcons();
+  </script>
+
 </body>
 </html>
