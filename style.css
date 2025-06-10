@@ -335,23 +335,24 @@ body.dark-mode .menu-list .resume-button:hover {
 .profile-image {
   width: 30%;
   position: relative;
-  margin-bottom: 2rem; /* Adds space below image */
-  padding: 0.5rem; /* Border spacing */
-  border: 2px solid gray; /* Blue border (light mode) */
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  padding: 0.5rem; /* Add padding so image doesn't touch border */
+  border: 2px solid gray;
   border-radius: 12px;
-  background-color: white; /* fallback */
+  background-color: white;
   transition: border-color 0.3s, background-color 0.3s;
 }
 
-/* For dark mode */
+/* Dark mode styling */
 body.dark-mode .profile-image {
   border-color: white;
   background-color: #0d1117;
 }
 
-
+/* Image itself */
 .profile-image img {
-  width: 100%;
+  width: 100%;           /* Use 100% to fill container, no fixed width */
   height: auto;
   border-radius: 10px;
   position: relative;
@@ -359,6 +360,7 @@ body.dark-mode .profile-image {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Offset gray shadow behind */
 .profile-image::after {
   content: "";
   position: absolute;
@@ -366,10 +368,11 @@ body.dark-mode .profile-image {
   left: 20px;
   width: 100%;
   height: 100%;
-  background: #f1f1f1;
+  background: #bebbbb; /* Your chosen light gray */
   border-radius: 10px;
   z-index: 1;
 }
+
 
 .text-content {
   width: 70%;
@@ -415,3 +418,174 @@ body.dark-mode .profile-image {
   gap: 1.5rem;
   align-items: center;
 }
+
+/* ---------- ABOUT SECTION ---------- */
+
+/* Optional background color utility */
+.bg-light {
+  background-color: #f5f5f5;
+}
+
+body.dark-mode .bg-light {
+  background-color: #1f1f1f;
+}
+
+/* Section heading styles */
+.centered-text {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.centered-text .section-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+}
+
+body.dark-mode .centered-text .section-subtitle {
+  color: #aaa;
+}
+
+.centered-text .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 0.2rem;
+  color: #000;
+}
+
+body.dark-mode .centered-text .section-title {
+  color: #fff;
+}
+
+/* Layout for image + text */
+.about-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.about-image-styled {
+  position: relative;
+  width: 20rem;
+  padding: 0.5rem;
+  margin-left: 1.5rem;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.about-image-styled img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Gray shadow box behind the image */
+.about-image-styled::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background-color: #bebbbb;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+body.dark-mode .about-image-styled {
+  background-color: #0d1117;
+  border-color: white;
+}
+
+body.dark-mode .about-image-styled::after {
+  background-color: white;
+}
+
+
+/* Text next to image */
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  color: #333;
+}
+
+body.dark-mode .about-text p {
+  color: #ccc;
+}
+
+/* Education highlight boxes */
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.highlight-box {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  max-width: 100%;
+  flex: 1 1 350px;
+}
+
+body.dark-mode .highlight-box {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+.highlight-icon img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.highlight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.highlight-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+body.dark-mode .highlight-content h3 {
+  color: #eee;
+}
+
+.highlight-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+body.dark-mode .highlight-content p {
+  color: #ccc;
+}
+
