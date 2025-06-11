@@ -325,12 +325,10 @@ body.dark-mode .menu-list .resume-button:hover {
 /* === SECTION === */
 
 .section {
-  margin-top: 8vh; 
   padding-top: 4vh;
   padding-bottom: 4vh;
-  height: auto;
-  box-sizing: border-box;
 }
+
 
 .profile-image {
   width: 30%;
@@ -338,7 +336,7 @@ body.dark-mode .menu-list .resume-button:hover {
   margin-bottom: 1.5rem;
   margin-right: 1.5rem;
   padding: 0.5rem; /* Add padding so image doesn't touch border */
-  border: 2px solid gray;
+  border: 2px solid black;
   border-radius: 12px;
   background-color: white;
   transition: border-color 0.3s, background-color 0.3s;
@@ -433,8 +431,9 @@ body.dark-mode .bg-light {
 /* Section heading styles */
 .centered-text {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.2rem;
 }
+
 
 .centered-text .section-subtitle {
   font-size: 1rem;
@@ -506,10 +505,6 @@ body.dark-mode .about-image-styled {
   border-color: white;
 }
 
-body.dark-mode .about-image-styled::after {
-  background-color: white;
-}
-
 
 /* Text next to image */
 .about-text {
@@ -552,7 +547,7 @@ body.dark-mode .about-text p {
 }
 
 body.dark-mode .highlight-box {
-  background-color: #2a2a2a;
+  background-color: #3a3a3a;
   border-color: #444;
 }
 
@@ -586,6 +581,122 @@ body.dark-mode .highlight-content h3 {
 }
 
 body.dark-mode .highlight-content p {
+  color: #ccc;
+}
+
+/* ---------- SKILLS SECTION ---------- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  gap: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.skill-item p {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- EXPERIENCE SECTION ---------- */
+.experience-card {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+.experience-logo img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.experience-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.experience-header span {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.experience-company {
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem;
+  color: #444;
+}
+
+.experience-details {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.experience-details li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.experience-skills {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+body.dark-mode .experience-card {
+  background-color: #3a3a3a;
+  border: 1px solid #3a3a3a;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #eaeaea;
+}
+
+
+body.dark-mode .experience-details li,
+body.dark-mode .experience-company,
+body.dark-mode .experience-skills,
+body.dark-mode .experience-header span {
   color: #ccc;
 }
 
