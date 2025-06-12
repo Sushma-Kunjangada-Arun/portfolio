@@ -196,4 +196,74 @@
   .social-links {
     justify-content: center;
   }
+
+  .work-projects {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-box {
+    max-width: 100%;
+    width: 100%;
+    min-height: auto;
+    margin-top: 2.5rem;
+  }
+
+  .project-thumbnail {
+    height: 160px;
+    object-fit: contain;
+  }
+
+  .highlight-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .highlight-content p,li{
+    text-align: left;
+  }
+
+  .highlight-content p,
+  .highlight-content ul,
+  .experience-skills {
+    font-size: 0.95rem;
+  }
+
+  .preview-label {
+    font-size: 0.7rem;
+    top: 6px;
+    left: 6px;
+  }
+
+  /* Contact Section Responsive */
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .contact-left img {
+    height: 180px;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .contact-socials {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .contact-footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
 }
+

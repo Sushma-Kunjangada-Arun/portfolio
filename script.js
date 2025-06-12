@@ -59,3 +59,13 @@ function toggleMenu() {
   overlay?.classList.toggle("show");
   icon?.classList.toggle("open");
 }
+
+// 📋 Copy to clipboard
+function copyToClipboard(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Copied: " + text);
+  });
+}
+
+lucide.createIcons();
