@@ -60,7 +60,6 @@ function toggleMenu() {
   icon?.classList.toggle("open");
 }
 
-// 📋 Copy to clipboard
 function copyToClipboard(id) {
   const text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text).then(() => {
@@ -68,4 +67,7 @@ function copyToClipboard(id) {
   });
 }
 
-lucide.createIcons();
+// Re-render Lucide icons after DOM load
+document.addEventListener("DOMContentLoaded", () => {
+  lucide.createIcons();
+});

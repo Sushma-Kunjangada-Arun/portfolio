@@ -242,28 +242,22 @@
     gap: 2rem;
   }
 
-  .contact-left img {
-    height: 180px;
+  .contact-logo img {
+    height: 130px;
   }
 
   .contact-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.3rem;
-  }
-
-  .contact-item {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .contact-socials {
     justify-content: center;
-    gap: 1.5rem;
   }
 
   .contact-footer {
     font-size: 0.9rem;
-    padding: 1rem;
   }
+
 }
 
