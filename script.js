@@ -60,12 +60,6 @@ function toggleMenu() {
   icon?.classList.toggle("open");
 }
 
-function copyToClipboard(id) {
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text).then(() => {
-    alert("Copied: " + text);
-  });
-}
 
 // Re-render Lucide icons after DOM load
 document.addEventListener("DOMContentLoaded", () => {
